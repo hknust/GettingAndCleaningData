@@ -10,8 +10,9 @@ The purpose of this repository is to process the raw files of the *Human Activit
 * README.md (this file)
 * CodeBook.md (code book)
 
-#NHow to Recreate Tidy Data File
-To reproduce the tidy data file
+#How to Recreate Tidy Data File
+To reproduce the tidy data file:
+
 1. Clone the repository to a local folder
 2. Open the `run_analysis.R` in R-Studio
 3. Modify the first line of the `run_analysis.R` file to set the working directory to the path of the local folder

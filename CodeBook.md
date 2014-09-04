@@ -30,8 +30,9 @@ All columns in the tidy data set with the exception of Subject and ActivityLabel
 See original data documentation for measurement units.
 
 Columns in tidy data set:
+
 Tidy Set | Original Data Set
----- | ----
+-------- | -----------------
 Subject | Subject Id
 ActivityLabel | Activity Id
 TimeDomainBodyAccMeanX | tBodyAcc-mean()-X
