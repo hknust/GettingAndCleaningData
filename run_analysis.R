@@ -6,7 +6,7 @@
 # IMPORTANT:
 #   Change the working directory path below to match the cloned project path.
 #
-setwd("~/git/Coursera/DataScience/03_GettingData/Project/")
+setwd("~/git/GettingAndCleaningData/")
 
 if (!require("reshape2")) {
   install.packages("reshape2")
@@ -24,13 +24,12 @@ y_features <- c("ActivityLabel")
 s_features <- c("Subject")
 
 # We need mean, mean freq. and std. dev. columns only
-extract_features <- grepl("\\-mean|meanFreq|std\\(\\)", x_features)
+extract_features <- grepl("\\-mean\\(\\)|-std\\(\\)", x_features)
 
 # Rename features, i.e. replace mean and std with camel-cased versions
 # and remove all instances of "(",")",",", and "-". Also expand the
 # time and frequency prefixes.
 x_features <- gsub("mean\\(\\)","Mean",x_features)
-x_features <- gsub("meanFreq\\(\\)","MeanFreq",x_features)
 x_features <- gsub("std\\(\\)","StdDev",x_features)
 x_features <- gsub("-|\\(|\\)|,","",x_features)
 x_features <- gsub("^t","TimeDomain",x_features)
